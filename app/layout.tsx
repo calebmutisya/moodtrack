@@ -31,8 +31,8 @@ export default function RootLayout({
   );
 
   const footer = (
-    <footer className="p-4 sm:p-8">
-      <p>Footer</p>
+    <footer className="p-4 sm:p-8 grid place-items-center">
+      <p className={`${fugaz.className} text-indigo-500`}>Created with ❤️ by <a href="https://github.com/calebmutisya/moodtrack" target="_blank">Caleb Mutisya</a></p>
     </footer>
   );
 
