@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Fugaz_One } from "next/font/google";
+import { Fugaz_One, Open_Sans } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 const fugaz = Fugaz_One({
   variable: "--font-fugaz",
   subsets: ["latin"],
   weight: "400",
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
   );
 
   const footer = (
-    <footer>
+    <footer className="p-4 sm:p-8">
       <p>Footer</p>
     </footer>
   );
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col`}
+        className={`${openSans.className} antialiased w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col`}
       >
         {header}
         {children}
